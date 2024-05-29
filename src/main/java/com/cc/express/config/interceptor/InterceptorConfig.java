@@ -12,6 +12,7 @@ public class InterceptorConfig implements WebMvcConfigurer {
                 .addPathPatterns("/user/refresh")
                 .addPathPatterns("/user/get/{id}")
                 .addPathPatterns("/user/test")// 其他接口token验证
+                .excludePathPatterns("/graph/all")
                 .excludePathPatterns("/user/login")
                 .excludePathPatterns("/user/registration");  // 所有用户都放行
     }

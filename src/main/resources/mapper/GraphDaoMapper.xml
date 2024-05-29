@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.cc.express.dao.GraphDao">
+    <select id="getAll" resultType="GraphEntity">
+        select *
+        from graph
+    </select>
+
+    <select id="getGraph">
+        select *
+        from graph
+        where id = #{id}
+    </select>
+
+    <update id="updateGraph" parameterType="GraphEntity">
+        update graph
+        set name           = #{name},
+            `to`           = #{to},
+            timecost       = #{timecost},
+            expressfee     = #{expressfee},
+            capacity       = #{capacity},
+            goods          = #{goods},
+            goodsamount    = #{goodsamount},
+            goodsthreshold = #{goodsthreshold},
+            isdelete       = #{isdelete}
+        where id = #{id}
+    </update>
+</mapper>

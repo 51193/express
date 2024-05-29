@@ -116,7 +116,7 @@ public class UserController {
     }
 
     @GetMapping("user/get/{id}")
-    public UserEntity test(@PathVariable Integer id){
+    public UserEntity getById(@PathVariable Integer id){
         return userService.selectById(id);
     }
 
