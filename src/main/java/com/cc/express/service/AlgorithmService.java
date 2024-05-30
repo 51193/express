@@ -391,7 +391,7 @@ public class AlgorithmService {
                 plan.setStartId(edge.u);
                 plan.setEndId(edge.v);
                 plan.setGoodsName(goodsName);
-                plan.setCost((costMap.get(new Pair<>(edge.u, edge.v))));
+                plan.setCost((costMap.get(new Pair<>(edge.u, edge.v))) * (int) edge.flow);
                 plan.setGoodsAmount((int) edge.flow);
                 if (edge.id / 10000 == 0) {
                     plan.setStartTime(0);
